@@ -50,7 +50,7 @@ ScrollReveal({
  ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 /*==================== typed js ====================*/
 const typed = new Typed('.multiple-text',{
-  strings: ['Frontend Developer', 'NONSENSE', 'AFK MODE'],
+  strings: ['Frontend Developer', 'Akuma', 'Yūsha'],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
