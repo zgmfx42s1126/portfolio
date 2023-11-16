@@ -56,3 +56,49 @@ const typed = new Typed('.multiple-text',{
   backDelay: 1000,
   loop: true
 });
+
+// email js
+
+/* const form = document.querySelector('form');
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const number = document.getElementById("number");
+const subject = document.getElementById("subject");
+const mess = document.getElementById("message");*/
+
+
+
+function sendEmail() {
+  /*const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br>
+  Phone Number: ${phone.value}<br> Message: ${mess.value}`;*/
+  
+  
+  
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "janemaedelacruz@gmail.com",
+    Password : "081A2F5979A4687558EB7EEB97B488709E8E",
+    To : 'janemaedelacruz@gmail.com',
+    From : "janemaedelacruz@gmail.com",
+    Subject : "This is the subject",
+    Body: "And this is the body" 
+}).then(
+  message => {
+    if (message == "OK") {
+      // sweetalert
+      Swal.fire({
+        title: "Success!",
+        text: "Imong mensahe kay na pasa na",
+        icon: "success"
+      });
+    }
+  }
+);
+}
+
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  sendEmail();
+})
